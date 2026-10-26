@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://c6gh1fgbll6jq"]
+
+[ext_resource type="Texture2D" uid="uid://ctv58fvir3gxn" path="res://carn2_resources/resources/textures/stego_texutre_import/stego_texture.png" id="1_gmwtd"]
+[ext_resource type="Texture2D" uid="uid://kydreb5clv8" path="res://carn2_resources/resources/textures/stego_texutre_import/stego_UVpng.png" id="2_c52ky"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gmwtd"]
+size = Vector3(100, 1, 100)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_idhgr"]
+albedo_color = Color(0.6718766, 0.00034721525, 0.6736971, 1)
+albedo_texture = ExtResource("1_gmwtd")
+roughness_texture = ExtResource("2_c52ky")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_u7r5n"]
+material = SubResource("StandardMaterial3D_idhgr")
+size = Vector2(100, 100)
+
+[node name="test_map_2" type="Node3D" unique_id=279892519]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=730985550]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=326944403]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5004563, 0)
+shape = SubResource("BoxShape3D_gmwtd")
+
+[node name="plane" type="MeshInstance3D" parent="StaticBody3D" unique_id=1609018711]
+mesh = SubResource("PlaneMesh_u7r5n")

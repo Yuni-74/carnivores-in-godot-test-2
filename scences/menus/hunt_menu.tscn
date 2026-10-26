@@ -1,0 +1,106 @@
+[gd_scene format=3 uid="uid://2qsde4mrefx7"]
+
+[ext_resource type="Script" uid="uid://c5e4q732pnldo" path="res://scripts/hunt_menu.gd" id="1_trp84"]
+
+[node name="Hunt_menu" type="Control" unique_id=1228750379]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_trp84")
+
+[node name="CanvasGroup" type="CanvasGroup" parent="." unique_id=913552135]
+
+[node name="Back_margin_contain" type="MarginContainer" parent="CanvasGroup" unique_id=324781389]
+offset_top = 1030.0
+offset_right = 100.0
+offset_bottom = 1080.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasGroup/Back_margin_contain" unique_id=90927962]
+layout_mode = 2
+
+[node name="Back" type="Button" parent="CanvasGroup/Back_margin_contain/VBoxContainer" unique_id=1082498965]
+layout_mode = 2
+text = "Back"
+
+[node name="Map_margin_contain" type="MarginContainer" parent="CanvasGroup" unique_id=776907209]
+propagate_maximum_size = false
+offset_top = 670.0
+offset_right = 435.0
+offset_bottom = 1030.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasGroup/Map_margin_contain" unique_id=747031819]
+layout_mode = 2
+
+[node name="Map 1" type="Button" parent="CanvasGroup/Map_margin_contain/VBoxContainer" unique_id=1287605554]
+layout_mode = 2
+action_mode = 0
+text = "Delphaeus Hills"
+
+[node name="Map 2" type="Button" parent="CanvasGroup/Map_margin_contain/VBoxContainer" unique_id=1706308704]
+layout_mode = 2
+action_mode = 0
+text = "Mayan Jungle"
+
+[node name="Dino_margin_contain" type="MarginContainer" parent="CanvasGroup" unique_id=1100942626]
+propagate_maximum_size = false
+offset_left = 450.0
+offset_top = 670.0
+offset_right = 885.0
+offset_bottom = 1030.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasGroup/Dino_margin_contain" unique_id=2097315941]
+layout_mode = 2
+
+[node name="Dino 1" type="Button" parent="CanvasGroup/Dino_margin_contain/VBoxContainer" unique_id=402066248]
+layout_mode = 2
+action_mode = 0
+text = "Para"
+
+[node name="Gun_margin_contain" type="MarginContainer" parent="CanvasGroup" unique_id=1693198799]
+propagate_maximum_size = false
+offset_left = 900.0
+offset_top = 670.0
+offset_right = 1335.0
+offset_bottom = 1030.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasGroup/Gun_margin_contain" unique_id=345969836]
+layout_mode = 2
+
+[node name="Gun 1" type="Button" parent="CanvasGroup/Gun_margin_contain/VBoxContainer" unique_id=1189488975]
+layout_mode = 2
+action_mode = 0
+text = "Pistol"
+
+[node name="Perks_margin_contain" type="MarginContainer" parent="CanvasGroup" unique_id=784610771]
+propagate_maximum_size = false
+offset_left = 1350.0
+offset_top = 670.0
+offset_right = 1785.0
+offset_bottom = 1030.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasGroup/Perks_margin_contain" unique_id=1764012668]
+layout_mode = 2
+
+[node name="Hunt_margin_contain" type="MarginContainer" parent="CanvasGroup" unique_id=1415522090]
+propagate_maximum_size = false
+offset_left = 1820.0
+offset_top = 1030.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasGroup/Hunt_margin_contain" unique_id=1553727009]
+layout_mode = 2
+
+[node name="Hunt" type="Button" parent="CanvasGroup/Hunt_margin_contain/VBoxContainer" unique_id=291066066]
+layout_mode = 2
+text = "Hunt"
+
+[connection signal="pressed" from="CanvasGroup/Back_margin_contain/VBoxContainer/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="CanvasGroup/Map_margin_contain/VBoxContainer/Map 1" to="." method="_on_map_1_pressed"]
+[connection signal="pressed" from="CanvasGroup/Map_margin_contain/VBoxContainer/Map 2" to="." method="_on_map_2_pressed"]
+[connection signal="pressed" from="CanvasGroup/Dino_margin_contain/VBoxContainer/Dino 1" to="." method="_on_dino_1_pressed"]
+[connection signal="pressed" from="CanvasGroup/Gun_margin_contain/VBoxContainer/Gun 1" to="." method="_on_gun_1_pressed"]
+[connection signal="pressed" from="CanvasGroup/Hunt_margin_contain/VBoxContainer/Hunt" to="." method="_on_hunt_pressed"]

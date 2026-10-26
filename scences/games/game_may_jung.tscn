@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bls6xsmvxji2g"]
+
+[ext_resource type="PackedScene" uid="uid://c6gh1fgbll6jq" path="res://scences/play_maps/test_map_2.tscn" id="1_gw54j"]
+[ext_resource type="PackedScene" uid="uid://3pvluvmyakq2" path="res://scences/characters/test_player.tscn" id="2_kn5dp"]
+
+[node name="game_may_jung" type="Node3D" unique_id=1235698187]
+
+[node name="test_map_2" parent="." unique_id=279892519 instance=ExtResource("1_gw54j")]
+
+[node name="Test_player" parent="." unique_id=1707225502 instance=ExtResource("2_kn5dp")]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=81754922]
+transform = Transform3D(1, 0, 0, 0, -0.25881907, 0.9659258, 0, -0.9659259, -0.25881907, 0, 37, 64)
+light_color = Color(0.81760633, 0.50365454, 0.23050386, 1)

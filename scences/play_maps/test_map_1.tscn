@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://disrv5tuuc3uu"]
+
+[ext_resource type="Texture2D" uid="uid://ctv58fvir3gxn" path="res://carn2_resources/resources/textures/stego_texutre_import/stego_texture.png" id="1_a6t2l"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cr8o1"]
+albedo_texture = ExtResource("1_a6t2l")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ipbom"]
+size = Vector2(100, 100)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_idhgr"]
+size = Vector3(100, 1, 100)
+
+[node name="Test_map_1" type="Node3D" unique_id=1521720641]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1698977983]
+
+[node name="plane" type="MeshInstance3D" parent="StaticBody3D" unique_id=1012696828]
+material_override = SubResource("StandardMaterial3D_cr8o1")
+mesh = SubResource("PlaneMesh_ipbom")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1825153931]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5004563, 0)
+shape = SubResource("BoxShape3D_idhgr")

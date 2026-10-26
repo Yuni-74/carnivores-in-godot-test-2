@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://36xlbijkl4y3"]
+
+[ext_resource type="Script" uid="uid://mmbghocjju28" path="res://scripts/main_menu.gd" id="1_dhtal"]
+
+[node name="Main Menu" type="Control" unique_id=160904340]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dhtal")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=255482871]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=385501801]
+layout_mode = 2
+
+[node name="play" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1455207947]
+layout_mode = 2
+text = "Play"
+
+[node name="options" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1262185541]
+layout_mode = 2
+text = "Options"
+
+[node name="quit" type="Button" parent="MarginContainer/VBoxContainer" unique_id=2144947551]
+layout_mode = 2
+text = "Quit"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/quit" to="." method="_on_quit_pressed"]

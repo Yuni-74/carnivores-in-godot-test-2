@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://t5g5hlibccuv"]
+
+[ext_resource type="PackedScene" uid="uid://c2vfnyqbe4d4r" path="res://scences/play_maps/delphaeus_hills.tscn" id="1_uecsm"]
+[ext_resource type="PackedScene" uid="uid://3pvluvmyakq2" path="res://scences/characters/test_player.tscn" id="2_xfuu6"]
+
+[node name="game_del_hills" type="Node3D" unique_id=1235698187]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=81754922]
+transform = Transform3D(1, 0, 0, 0, -0.25881907, 0.9659258, 0, -0.9659259, -0.25881907, 0, 37, 64)
+
+[node name="Delphaeus Hills" parent="." unique_id=1521515866 instance=ExtResource("1_uecsm")]
+
+[node name="note_grid_1023x1023" type="Node" parent="." unique_id=1363784965]
+
+[node name="Test_player" parent="." unique_id=1707225502 instance=ExtResource("2_xfuu6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 327.4027, 13.72551, 745.25696)
